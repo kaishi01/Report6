@@ -30,7 +30,7 @@ public class Board {
         */
         //別の表記法
         for ( int i=0; i<9; i++ ){
-            System.out.print(cells[i].view()+" ");
+            System.out.print(cells[i]+" ");
             if (i==2||i==5||i==8) {
                 System.out.println();
 

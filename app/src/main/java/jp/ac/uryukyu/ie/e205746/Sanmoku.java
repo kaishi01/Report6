@@ -6,8 +6,14 @@ package jp.ac.uryukyu.ie.e205746;
 public class Sanmoku {
     
     public static void main(String[] args) {
-        Board.cells();
-        
+        var manager = new GameManager();
+        manager.showBoard();
+
+        /*
+        while(true) {
+            
+        }
+        */
     }
 
 
