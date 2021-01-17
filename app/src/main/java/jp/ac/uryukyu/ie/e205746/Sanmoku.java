@@ -7,8 +7,9 @@ public class Sanmoku {
     
     public static void main(String[] args) {
         var manager = new GameManager();
+        
         manager.showBoard();
-
+        manager.isPut();
         /*
         while(true) {
             

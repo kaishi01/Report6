@@ -2,15 +2,21 @@ package jp.ac.uryukyu.ie.e205746;
 
 class GameManager {
     private Board board = new Board();
-    private Player player1 = new Maru("○");
+    private Player player1 = new Player("○");
     private Player player2 = new Player("×");
 
     public GameManager() {
-        player1.view();
+        
     }
 
     public void showBoard() {
-        board.view();
+        board.showBoard();
+    }
+
+    public void isPut() {
+        board.select();
     }
     
+    //public void actPlayer1() {
+
 }
