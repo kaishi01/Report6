@@ -32,23 +32,11 @@ public class Board {
 
     public void put(int select_number, String mark){
         if ( !isEmpty(select_number)){
-            //既に埋まっている
-            return;//実際はエラーを起こしたい
+            return;
         }
         cells[select_number] = mark;
     }
 	public void showBoard(){
-        /*
-        String[][] board = new String [3][3];
-        for ( int i=0; i<3; i++){
-            String str = String.join("|", board[i]);
-            System.out.println(str);
-            if (i<2){
-                System.out.println("--------------");
-            }
-        }
-        */
-        //別の表記法
         for ( int i=0; i<9; i++ ){
             System.out.print(cells[i]+" ");
             if (i==2||i==5||i==8) {
