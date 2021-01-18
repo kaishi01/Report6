@@ -8,7 +8,7 @@ package jp.ac.uryukyu.ie.e205746;
 public class Sanmoku {
     /**
      * 3目並べを実行する
-     * @param args
+     * @param args 引数
      */
     public static void main(String[] args) {
         var manager = new GameManager();
