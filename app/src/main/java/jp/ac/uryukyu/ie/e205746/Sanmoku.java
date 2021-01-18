@@ -9,7 +9,8 @@ public class Sanmoku {
         var manager = new GameManager();
         
         manager.showBoard();
-        manager.isPut();
+        manager.action();
+
         /*
         while(true) {
             

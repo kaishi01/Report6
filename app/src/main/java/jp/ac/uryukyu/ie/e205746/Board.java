@@ -3,7 +3,7 @@ package jp.ac.uryukyu.ie.e205746;
 import java.util.Scanner;
 
 public class Board {
-    private Player[] cells = new Player[9];
+    private String[] cells = new String[9];
 
     public boolean isEmpty(int x){
         if ( cells[x]==null){
@@ -12,7 +12,7 @@ public class Board {
         return false;
     }
 
-    public void select() {
+    public void select(Player player) {
         System.out.println("どこに置く？");
         for ( int index=0; index<9; index++) {
             if (isEmpty(index)){
@@ -25,12 +25,12 @@ public class Board {
         Scanner scanner = new Scanner(System.in);
         int select_number = scanner.nextInt();
 
-        put(select_number, Maru.view());
+        put(select_number, player.view());
     }
 
     
 
-    public void put(int select_number, Player mark){
+    public void put(int select_number, String mark){
         if ( !isEmpty(select_number)){
             //既に埋まっている
             return;//実際はエラーを起こしたい
@@ -62,4 +62,6 @@ public class Board {
         }
         System.out.println();
     }
+
+    
 }
