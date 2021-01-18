@@ -2,9 +2,16 @@ package jp.ac.uryukyu.ie.e205746;
 
 import java.util.Scanner;
 
+/**
+ * ３×３のボード
+ */
 public class Board {
     private String[] cells = new String[9];
-
+    /**
+     * cells[x]がnullかどうか判定する
+     * @param x cells内の任意の要素
+     * @return nullの場合true, nullでない場合false
+     */
     public boolean isEmpty(int x){
         if ( cells[x]==null ){
             return true;
@@ -12,6 +19,10 @@ public class Board {
         return false;
     }
 
+    /**
+     * 番号を選び、選んだ番号に置けるならそこにそれぞれのプレイヤーが持つ記号を代入する
+     * @param player ○または×を持つ
+     */
     public void select(Player player) {
         System.out.println("どこに置く？");
         for ( int index=0; index<9; index++) {
@@ -28,14 +39,21 @@ public class Board {
         put(select_number, player.view());
     }
 
-    
-
+    /**
+     * 選択した番号がnullであった場合、そこに○または×を代入する
+     * @param select_number プレイヤーが選択した番号
+     * @param mark ○または×
+     */
     public void put(int select_number, String mark){
         if ( !isEmpty(select_number)){
             return;
         }
         cells[select_number] = mark;
     }
+
+    /**
+     * ３×３のボードを表示する
+     */
 	public void showBoard(){
         for ( int i=0; i<9; i++ ){
             System.out.print(cells[i]+" ");
@@ -51,6 +69,10 @@ public class Board {
         System.out.println();
     }
 
+    /**
+     * ○が勝つ勝利条件
+     * @return ○が勝つ場合true,そうでない場合faise
+     */
     public boolean maruCheck(){
         if ( cells[0]=="○" && cells[1]=="○" && cells[2]=="○"||
              cells[3]=="○" && cells[4]=="○" && cells[5]=="○"||
@@ -65,6 +87,10 @@ public class Board {
         return false;
     }
 
+    /**
+     * ×が勝つ勝利条件
+     * @return ×が勝つ場合true,そうでない場合faise
+     */
     public boolean batsuCheck(){
         if ( cells[0]=="×" && cells[1]=="×" && cells[2]=="×"||
              cells[3]=="×" && cells[4]=="×" && cells[5]=="×"||
