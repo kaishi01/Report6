@@ -6,7 +6,7 @@ public class Board {
     private String[] cells = new String[9];
 
     public boolean isEmpty(int x){
-        if ( cells[x]==null){
+        if ( cells[x]==null ){
             return true;
         }
         return false;
@@ -63,5 +63,31 @@ public class Board {
         System.out.println();
     }
 
-    
+    public boolean maruCheck(){
+        if ( cells[0]=="○" && cells[1]=="○" && cells[2]=="○"||
+             cells[3]=="○" && cells[4]=="○" && cells[5]=="○"||
+             cells[6]=="○" && cells[7]=="○" && cells[8]=="○"||
+             cells[0]=="○" && cells[3]=="○" && cells[6]=="○"||
+             cells[1]=="○" && cells[4]=="○" && cells[7]=="○"||
+             cells[2]=="○" && cells[5]=="○" && cells[8]=="○"||
+             cells[0]=="○" && cells[4]=="○" && cells[8]=="○"||
+             cells[2]=="○" && cells[4]=="○" && cells[6]=="○"){
+                return true;
+        }
+        return false;
+    }
+
+    public boolean batsuCheck(){
+        if ( cells[0]=="×" && cells[1]=="×" && cells[2]=="×"||
+             cells[3]=="×" && cells[4]=="×" && cells[5]=="×"||
+             cells[6]=="×" && cells[7]=="×" && cells[8]=="×"||
+             cells[0]=="×" && cells[3]=="×" && cells[6]=="×"||
+             cells[1]=="×" && cells[4]=="×" && cells[7]=="×"||
+             cells[2]=="×" && cells[5]=="×" && cells[8]=="×"||
+             cells[0]=="×" && cells[4]=="×" && cells[8]=="×"||
+             cells[2]=="×" && cells[4]=="×" && cells[6]=="×"){
+                return true;
+        }
+        return false;
+    }
 }

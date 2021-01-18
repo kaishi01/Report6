@@ -8,8 +8,10 @@ public class Sanmoku {
     public static void main(String[] args) {
         var manager = new GameManager();
         
-        manager.showBoard();
-        manager.action();
+        while(true) {
+            manager.action();
+        }
+        
 
         /*
         while(true) {

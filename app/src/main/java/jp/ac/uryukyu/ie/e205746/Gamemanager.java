@@ -17,17 +17,27 @@ class GameManager {
         board.showBoard();
     }
 
-    public void action() {// 名前変更
-        for ( var player : players){
+    public void action() {
+        for ( var player : players ){
+            showBoard();
             board.select(player);
-            
-            //勝利条件のメソッド
-            //勝ったらreturn
-            board.showBoard();
-        }
-        
-    }
-    
-    //public void actPlayer1() {
 
+            maruCheck();
+            batsuCheck();
+            //勝ったらreturn
+            
+        }
+    }
+
+    public void maruCheck(){
+        if ( board.maruCheck() == true){
+            System.out.println("○の勝ちです");
+        }
+    }
+
+    public void batsuCheck(){
+        if ( board.batsuCheck()){
+            System.out.println("×の勝ちです");
+        }
+    }
 }
