@@ -7,6 +7,7 @@ public class Player {
     private String mark;
     /**
      * 記号を持つ
+     * @param 記号
      */
     public Player(String mark) {
         this.mark = mark;
