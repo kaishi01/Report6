@@ -12,7 +12,8 @@ public class Sanmoku {
      */
     public static void main(String[] args) {
         var manager = new GameManager();
-        
+        System.out.println("3目並べを開始します");
+        System.out.println("先手：○, 後手：×");
         while(true) {
             manager.action();
         }

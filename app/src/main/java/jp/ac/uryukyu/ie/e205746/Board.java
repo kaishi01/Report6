@@ -3,7 +3,7 @@ package jp.ac.uryukyu.ie.e205746;
 import java.util.Scanner;
 
 /**
- * ３×３のボード
+ * ゲームを行うフィールド
  */
 public class Board {
     private String[] cells = new String[9];
