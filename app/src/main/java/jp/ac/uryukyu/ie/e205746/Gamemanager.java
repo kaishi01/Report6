@@ -37,8 +37,6 @@ class GameManager {
 
             maruCheck();
             batsuCheck();
-            //勝ったらreturn
-            
         }
     }
 
